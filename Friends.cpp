@@ -139,27 +139,15 @@ private:
 */
 		// Organize the friends list based on friend status ( In-Game, Online and Offline )
 		std::vector<FriendsListMenuItem_t>::iterator iter;
-		for ( iter = vecMenuFriends->begin(); iter != vecMenuFriends->end(); iter++  )
-		{	
+		for( iter = vecMenuFriends->begin(); iter != vecMenuFriends->end(); iter++ )
+		{
 			// Add In-game friends to the vecIngGameMenuItemFriends vector, 
 			// online friends to the vecOnlineMenuItemFriends vector
 			// and offline friends to the vecOfflineMenuItemFriends vector
-			if ( iter->m_bIsFriendInGame )
-			{
-				vecInGameMenuItemFriends.push_back( *iter );
-				vecInGameMenuItemFriends.reserve(vecInGameMenuItemFriends.size());
-			}
-			else if ( iter->m_bIsFriendOnline && !iter->m_bIsFriendInGame )
-			{
-				vecOnlineMenuItemFriends.push_back( *iter );
-				vecOnlineMenuItemFriends.reserve(vecOnlineMenuItemFriends.size());
-			}
-			else if ( !iter->m_bIsFriendOnline )
-			{
-				vecOfflineMenuItemFriends.push_back( *iter );
-				vecOfflineMenuItemFriends.reserve(vecOfflineMenuItemFriends.size());
-			}
-		}	
+			( iter->m_bIsFriendInGame ) ? vecInGameMenuItemFriends.push_back( *iter ) :
+			( iter->m_bIsFriendOnline && !iter->m_bIsFriendInGame ) ? vecOnlineMenuItemFriends.push_back( *iter ) :
+			vecOfflineMenuItemFriends.push_back( *iter );
+		}
 		if ( !vecInGameMenuItemFriends.empty() )
 		{
 			AddMenuItem( CFriendsListMenu::MenuItem_t("In Game", k_menuItemEmpty ) );
