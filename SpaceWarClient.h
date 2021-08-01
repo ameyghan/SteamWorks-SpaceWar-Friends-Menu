@@ -112,7 +112,7 @@ struct FriendsListMenuItem_t
 	bool m_bIsFriendInGame = false;
 
 	// Sort comparator
-	bool operator < ( const FriendsListMenuItem_t& rhs ) const 
+	inline bool operator < ( const FriendsListMenuItem_t& rhs ) const 
 	{ 
 		return _stricmp( SteamFriends()->GetFriendPersonaName( this->m_steamIDFriend ), 
 						 SteamFriends()->GetFriendPersonaName( rhs.m_steamIDFriend ) ) < 0; 
