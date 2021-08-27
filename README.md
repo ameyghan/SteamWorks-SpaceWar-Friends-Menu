@@ -4,7 +4,5 @@ The intention of this work is to offer users additional Steam friends presence i
 and functionality and to provide developers with the information required to implement
 these features into their projects as they plan to integrate and publish their games on
 Steam.
-For a quick and convenient browsing experience, C++ functions and contents highlighted
-in bold within the accompanying PDF document are clickable. Clicking on each item will navigate to the desired
-item.
+
 This addition is developed using Steamworks SDK version 151.
