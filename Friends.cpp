@@ -245,7 +245,6 @@ private:
 		default:
 		{
 			pszFriendStatus = "";
-		}
 			break;
 		}
 
