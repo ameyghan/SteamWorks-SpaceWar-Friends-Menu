@@ -141,9 +141,9 @@ private:
 		std::vector<FriendsListMenuItem_t>::iterator iter;
 		for( iter = vecMenuFriends->begin(); iter != vecMenuFriends->end(); iter++ )
 		{
-			// Add In-game friends to the vecIngGameMenuItemFriends vector, 
-			// online friends to the vecOnlineMenuItemFriends vector
-			// and offline friends to the vecOfflineMenuItemFriends vector
+			// Add In-game friends to the vecIngGameMenuItemFriends, 
+			// online friends to the vecOnlineMenuItemFriends,
+			// and offline friends to the vecOfflineMenuItemFriends containers respectively.
 			( iter->m_bIsFriendInGame ) ? vecInGameMenuItemFriends.push_back( *iter ) :
 			( iter->m_bIsFriendOnline && !iter->m_bIsFriendInGame ) ? vecOnlineMenuItemFriends.push_back( *iter ) :
 			vecOfflineMenuItemFriends.push_back( *iter );
